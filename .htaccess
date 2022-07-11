@@ -1,0 +1,7 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^thefaithride\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.thefaithride\.com$
+RewriteRule ^public_html$ "https\:\/\/thefaithride\.com\/" [R=301,L]
+RewriteCond %{HTTPS} off 
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
